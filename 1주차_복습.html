@@ -1,0 +1,47 @@
+
+<head>
+  <title>REVIEW_TIME</title>
+  <style>
+    <!-- 선택자 우선 순위는 id class tag 순서-->
+    <!-- 우선 순위를 잘 파악해야 원하는 디자인 가능-->
+  </style>
+</head>
+
+<body>
+  <strong>글자 굵게 표시</strong>
+  <u>밑줄 글자 표시</u>
+  <h1>제목 크기가</h1>
+  <h2>달라진다지</h2>
+  강제 <br> 줄바꿈 <br>
+  <p>이건 문단이라네</p>
+  <!--img src="" alt=""-->
+  <ul>
+    <li> list </li>
+    <li> unordered </li>
+  </ul>
+  <ol>
+    <li>list</li>
+    <li>ordered</li>
+  </ol>
+  <a href="#" target="_blank" title="이건 링크야 그리고 미리 뜨지">link</a>
+  <h3>box model</h3>
+  <p> <h5>화면 전체를 차지하는 태그 : Block level element</h5>
+  display : inline; 속성을 활용하면 inline level로 활용 가능 </p>
+  <p><h5>자기 자신의 부피만 차지하는 태그 : inline element</h5>
+  display : block; 속성을 활용하면 block level로 활용 가능</p>
+  display : none; 속성을 활용하면 해당 태그 안의 내용이 안 보임
+  <!--border 는 피부, padding은 지방, margin은 옷-->
+  <!-- margin과 padding은 상하좌우 상하/좌우 상/좌우/하 상/우/하/좌 순으로 지정된다.-->
+  <!-- width / height로 content 가로 세로 지정 -->
+  <!-- border width는 두꼐, color는 색, style은 선 종류 지정-->
+  <h3>Grid</h3>
+  <p>그리드화 하고 싶은 각 영역을 하나의 태그로 묶어야한다. <br>
+  이 때 사용하는 태그는 의미없는 div나 span을 활용하는데, div는 block level, span은 inline 임을 기억하자.
+  <br> 태그로 묶고 나면 CSS에서 display: grid; 속성을 지정해주어야 그리드로 보인다.</p>
+  <p>grid-template-columns가 의미하는 바는, 차지하는 픽셀만큼과 나머지 공간을 해당 프레임 만큼 차지하게 만들겠다는 의미.<br>
+  프레임은 동일 선상에 존재하는 프레임들의 총합을 나눈 값. 뭔 말이고. </p>
+</body>
+
+<!--html의 문서적 역할을 위해 디자인 전용의 CSS 등장
+사용 방법은 헤드 부분에 스타일 정의 또는 CSs 전용 문서 생성 또는 특정 태그
+ 안에 선언-->
