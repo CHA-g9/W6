@@ -201,16 +201,34 @@ h1 {
 }
 .service > .music_video {
     flex: 1;
-    
 }
 .service > iframe{
-    width : 783.23px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
 }
 .service > .contents3{
+    flex: 1;
     padding: 20px;
 }
 .service > .contents3 > h2{
     margin-bottom: 27px;
+}
+.service > .contents3 > .button_new{
+    width: 200px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    background: cornflowerblue;
+    border-radius: 7px;
+    transition: width 2s;
+    cursor: pointer;
+    padding: auto;
+}
+.service > .contents3 > .button_new:hover{
+    width: 300px;
 }
 
 /*main_text2*/
