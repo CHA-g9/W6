@@ -1,0 +1,378 @@
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+}
+h1 {
+    font-size: 48px;
+    font-weight: 100;
+}
+.contents1{
+    font-size: 20px;
+    font-weight: lighter;
+}
+.contents1_bold{
+    font-size: 18px;
+    font-weight: bold;
+}
+.contents3{
+    font-size: 14px;
+    font-weight: 100;
+}
+.result{
+    font-size: 24px;
+}
+.intro_bg{
+    /*인트로 부분 배경화면 지정*/
+    background-image: url("image/intro.jpg");
+    width: 100%;
+    height: 718px;
+}
+.header{
+    /* 인트로 부분 메뉴 디자인*/
+    display: flex;
+    width: 100%;
+    margin:auto;
+    height: 86px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.searchArea{
+    /*검색 입력 창 주변 디자인*/
+    width: 300px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin-top: 24px;
+    margin-left: 130px;
+    /*클래스명을 지을 때 대소문자는 아무런 의미가 없음*/
+    /*무조건 _ 이용해서 구분해야함.*/
+}
+.searchArea > form > input{
+    /*검색 입력 창 디자인*/
+    border: none;
+    width: 250px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0);
+    color: #fff;
+    padding-left: 10px;
+}
+input::-webkit-input-placeholder {
+    color: #fff;
+    font-style: bold;
+}
+.searchArea > form > input :-ms-input-placeholder {
+    color: #fff;
+    font-weight: bold;
+}
+.searchArea > form > span{
+    /*검색 글자 디자인*/
+    width: auto;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    /*검색 글자에 다가가면 마우스 커서 모양이 포인터로 변경*/
+    /*구글도 이런 식으로 input 선을 없애고 입력 창을 디자인 하는 식으로 눈을 속인다.*/
+}
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 86px;
+    width: calc(1280px - 300px);
+     /*색 넣어서 영역 구분 확인하기*/
+}
+.nav > li{
+    margin-left: 84px;
+    transition-duration: 0.4s;
+}
+.nav > li > a{
+    color: #fff; /*white로 작성해도 무방, 검은색은 000*/
+}
+.nav > li:hover {
+    padding: 0px 10px;
+    border-bottom: 5px solid #FFF;
+    border-top: 5px solid #FFF;
+    /*위아래로 선이 생기는 애니메이션*/
+}
+
+.amount{
+    position: relative;
+    top: -66px;
+    /*현재 위치에 비해 66px만큼 올라가라는 명령*/
+    /*타 태그 요소에 영향을 끼치지 않고 자신의 영역은 그대로 유지*/
+    display: flex;
+    width: 1280px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /*좌(음수)우(양수) 하 그림자 산포도 순으로 그림자 생성*/
+    /*제자리에서 은은하게 뿌려지는 그림자*/
+    margin: auto;
+    
+}
+.amount > li > div{
+    text-align: center;
+    height: 57px;
+    margin-top: 37px;
+    
+    
+}
+.amount > li:not(:last-child) > div{
+    border-right: 1px solid #E1E1E1;
+    /*중간 회색선을 넣기 위한 부분*/
+    /*전부 다 넣으면 안되므로 not으로 예외처리*/
+    /*모든 li의 div의 마지막 요소는 그 자체임*/
+    /*따라서 마지막 li에만 이 속성을 제외하고 주겠다는 명령.*/
+
+}
+.amount > li {
+    flex: 1; /*자식요소에 flex 값, 몇 자리씩 차지할지 정해주는 코드*/
+    height: 132px;
+    
+}
+.intro_text{
+    width: 100%;
+    margin: 231px auto 231px auto; /*상하 231 좌우 auto*/
+    text-align: center;
+
+}
+.intro_text > h1,
+.intro_text > h4{
+    color: white;
+}
+
+/*main_text0*/
+
+.main_text0{
+    width: 100%;
+    height: 601px;
+    margin-top: -132px;
+    background: #E6E0F8;
+}
+.main_text0 > h1 {
+    padding-top: 116px;
+    text-align: center;
+}
+.main_text0 > .contents1{
+    /* 20px font 가져다쓰기 */
+    text-align: center;
+}
+.icons{
+    display: flex;
+    width: 1280px;
+    /*1280px 기준 안에서 3분할*/
+    margin: auto;
+}
+.icons > li{
+    flex: 1;
+    margin-top: 37px;
+    margin-bottom: 15px;
+    height: 302px;
+    background: white;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+.icons > li > .icon_img{
+    margin-top: 25px;
+    margin-bottom: 18px;
+}
+.icons > li > .icon_img > img {
+    width: 100px;
+}
+.icons > li:not(:last-child){
+    margin-right: 20px;
+}
+.icons .contents3{
+    width: 240px;
+    /*영상에서는 190px로 지정하였으나 
+    180으로 지정하는 게 심미적으로 아름다워서
+    180으로 지정함.*/
+    margin: auto;
+    padding-top: 10px;
+    letter-spacing: -1px;
+}
+.more{
+    width: 100px;
+    height: 30px;
+    background: #E6E0F8;
+    color:white;
+    font-size: 12px;
+    margin: 25px auto;
+    line-height: 30px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.more > a:link, a:visited {
+    color: #fff; /*링크 색 없애기*/
+}
+.more:hover  {
+    background-color: #F2F5A9;
+    color: black;
+    /*색 변하는 버튼 트랜지션*/
+}
+.more > a:hover {
+    color: black;
+}
+
+/*main_text1*/
+
+.main_text1{
+    width:100%;
+    height: 659px;
+}
+.main_text1 > h1{
+    background-color: #fff;
+    padding-top: 50px;
+    text-align: center;
+}
+.main_text1 > .contents1{
+    text-align: center;
+}
+.service{
+    display: flex;
+    background-color: #E0E0F8;
+    width: 1280px;
+    margin: 49px auto;
+    height: 427px;
+}
+.service > .music_video {
+    flex: 1;
+}
+.service > iframe{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+.service > .contents3{
+    flex: 1;
+    padding: 20px;
+}
+.service > .contents3 > h2{
+    margin-bottom: 27px;
+}
+.service > .contents3 > .button_new{
+    width: 200px;
+    height: 30px;
+    margin: 30px 30px 30px 0px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(135deg, #e570e7 0%,#79f1fc) ;
+    border-radius: 7px;
+    transition: width 2s;
+    cursor: pointer;
+    padding: auto;
+}/*버튼 트랜지션*/
+.service > .contents3 > .button_new:hover{
+    width: 300px;
+    color: #fff;
+}
+.button_new span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: #fff;
+}
+  
+.button_new span:after {
+    content: '되지 않음';
+    position: relative;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+    color: #fff;
+}
+  
+.button_new:hover span {
+    padding-right: 25px;
+    color: #fff;
+}
+  
+.button_new:hover span:after {
+    opacity: 1;
+    right: 0;
+    color: #fff;
+}
+
+/*main_text2*/
+.main_text2{
+    width: 100%;
+    height: 418px;
+    background-image: url("image/last.png");
+    background-size: 100%; /*해당 코드는 이미지가 정확히 출력되지 않아 임의로 추가함*/
+}
+.main_text2 > ul{
+    display: flex;
+    padding-top: 138px;
+}
+.main_text2 > ul > li{
+    flex: 1;
+    text-align: center;
+}
+.main_text2 > ul > li > div > h1,
+.main_text2 > ul > li > div{
+    color: white;
+}
+.more2{
+    width: 220px;
+    height: 40px;
+    border: 1px solid white;
+    cursor: pointer;
+    line-height: 40px;
+    margin: 16px auto;
+    position: relative;
+    box-sizing: border-box;
+    
+}/*마지막 버튼에 휘릭 트랜지션*/
+.more2:before, .more2:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 0;
+    transition:  width 0.8s, height 0.8s;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.more2:before{
+    top: 0;
+    left: 0; 
+    border: 0; 
+    border-top-width:2px; 
+    border-left-width: 2px; 
+}
+.more2:after{
+    bottom: 0;
+    right: 0; 
+    border: 0; 
+    border-bottom-width: 2px; 
+    border-right-width: 2px;
+}
+.more2:hover:before, .more2:hover:after{
+    border-style: solid;
+    border-color: white;
+    width: 100%;
+    height:100%;
+}
+
+footer{
+    background: #1f1f1f;
+    display: flex;
+    /*flex에 1을 줄 때를 제외하고는 flex의 합은 12*/
+    padding: 30px;
+}
+footer > div:first-child{
+    flex: 3;
+    text-align: center;
+    color: #fff;
+    
+}
+footer > div:last-child{
+    flex: 9;
+    color: #fff;
+    
+
+}
