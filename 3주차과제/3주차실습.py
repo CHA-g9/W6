@@ -3,16 +3,18 @@ list_a = [1,2,3,["a","b","c"]]
 print(list_a)
 # 중첩된 리스트 요소에 접근하기
 print(list_a[3])
-print(list_a[3][2])
+print(list_a[3][1])
 #리스트 길이 구하기
 print(len(list_a))
-#리스트 요소 추가하기
+#리스트 요소 추가하기 (append)
 list_a = list_a + [4]
 print(list_a)
-#리스트 요소 삽입하기
+#list_a.append(4)
+#리스트 요소 삽입하기 (insert)
 list_a = [5] + list_a
 print(list_a)
-# 리스트 요소 제거하기
+#list_a.insert
+# 리스트 요소 제거하기 (remove)
 list_a = list_a[0:3] + list_a[4:]
 print(list_a)
 # 딕셔너리 만들기
