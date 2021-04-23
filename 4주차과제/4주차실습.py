@@ -125,9 +125,10 @@ else:
 반복대상 : 리스트, 튜플, 문자열 등 반복해서 연산할 어떤 대상
 반복제어변수 : 하나하나 발로 뛰며 반복대상을 가져와 계산하는 변수
 '''
+summ = 0
 for number in [1,2,3,4,5,6,7,8,9,10]:
-    sum+=number
-    print(sum)
+    summ +=number
+    print(summ)
 '''
 number -> 반복제어변수
 리스트 -> 반복대상
