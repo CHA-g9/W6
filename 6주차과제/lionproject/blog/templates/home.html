@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<!---base.html의 템플릿 상속-->
+{% block content %}
+    <h1>Blog Project</h1>
+    <div>
+        <a href="{%url 'new'%}">블로그 쓰러가기</a>
+    </div>
+    <div class = "container">
+    {% for blog in blogs %}
+        <div>
+        <h3>{{blog.title}}</h3>
+        {{blog.writer}}
+        {{blog.summary}}<a href="{%url 'detail' blog.id%}">...more</a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

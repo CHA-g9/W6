@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Write Your Blog</h1>
+<!--여긴 왜 그냥 create 하면 안되나용-->
+<form action="{%url 'create'%}" method="post">
+    {%csrf_token%}
+    <!--이 토큰을 넣어야 CSRF 공격이 아님을 인식해 공격 방어 가능-->
+    <p>제목 : <input type="text" name = "title"></p>
+    <p>작성자 :  <input type = "text" name = "writer"></p>
+    본문 : <textarea name ="body" id="" cols="30" rows="10"></textarea>
+    <button type="submit">submit</button>
+</form> 
+{% endblock %}

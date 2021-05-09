@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Update Your Blog</h1>
+
+<form action="{% url 'update' blog.id%}" method="post">
+    {%csrf_token%}
+    <!--이 토큰을 넣어야 CSRF 공격이 아님을 인식해 공격 방어 가능-->
+    <p>제목 : <input type="text" name = "title" value="{{blog.title}}"></p>
+    <p>작성자 :  <input type = "text" name = "writer" value="{{blog.writer}}"></p>
+    본문 : <textarea name ="body" id="" cols="30" rows="10">{{blog.body}}</textarea>
+    <button type="submit">submit</button>
+</form>
+{% endblock %}
